@@ -15,4 +15,4 @@ jobs:
       - name: Install docstring-markdown
         run: pip install pydoc-markdown
       - name: Generate Markdown from docstrings
-        run: pydoc-markdown ./reposit01 --output-dir ./docs 
+        run: pydoc-markdown ./reposit01 --output-dir ./docs  
