@@ -14,5 +14,7 @@ jobs:
       
       - name: Install docstring-markdown
         run: pip install pydoc-markdown
-      - name: Generate Markdown from docstrings
-        run: pydoc-markdown ./reposit01 -I docs/  
+      - name: Go to directory
+        run: cd reposit01
+      - name: Generate markdown 
+        run: pydoc-markdown -I docs/  
