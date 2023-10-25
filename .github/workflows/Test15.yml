@@ -11,8 +11,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Clone repository
         run: git clone https://github.com/Sciebo-RDS/rds-ng.git ./reposit01
-  markdown:   
+      
       - name: Install docstring-markdown
-        run: pipx install pydoc-markdown
+        run: pip install pydoc-markdown
       - name: Generate Markdown from docstrings
         run: pydoc-markdown ./reposit01 --output-dir ./docs 
