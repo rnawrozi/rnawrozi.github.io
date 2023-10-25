@@ -2,7 +2,7 @@ name: Clone Repository and Markdown
 on:
   push:
     branches:
-      - rnawrozi-patch-1
+      - Testapplications_for_Uni
 jobs:
   clone:
     runs-on: ubuntu-latest
