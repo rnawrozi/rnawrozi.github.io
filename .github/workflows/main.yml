@@ -1,4 +1,4 @@
-nname: Clone Repository and Markdown
+name: Clone Repository and Markdown
 on:
   push:
     branches:
