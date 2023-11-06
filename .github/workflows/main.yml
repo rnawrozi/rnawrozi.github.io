@@ -17,9 +17,7 @@ jobs:
       - name: Go to directory
         run: cd reposit01
       - name: Generate markdown 
-        run: pydoc-markdown -I docs/  
-          run: pydoc-markdown ./reposit01 -I ./docs     
-    
+        run: pydoc-markdown -I docs/   
     #(4. Kopieren eines Ordners)
     - name: Copy Folder
         #run: cp -r path/to/source/folder path/to/destination/folder
