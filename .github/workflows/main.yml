@@ -1,4 +1,4 @@
-name: Clone Repository and Markdown
+nname: Clone Repository and Markdown
 on:
   push:
     branches:
@@ -10,30 +10,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Clone repository
-        run: git clone https://github.com/Sciebo-RDS/rds-ng.git ./reposit01
+        run: git clone https://github.com/Sciebo-RDS/rds-ng.git
       
       - name: Install docstring-markdown
         run: pip install pydoc-markdown
       - name: Go to directory
-        run: cd reposit01
+        run: cd rds-ng/docs
       - name: Generate markdown 
-        run: pydoc-markdown -I docs/   
-      - name: Create Docusaurus
-        run: npx create-docusaurus@latest my-website classic
-      - name: change Directory
-        run: cd my-website
-      - name: copy Folder
-        run: cp -r ./docs ./my-website
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18 
+        run: pydoc-markdown  
+      - name: Build Docusaurus # create weg, stattdessen build docusaurus
+        run: npm run build      
+      # brauchen wir das hier wirklich?
+      #- name: Setup Node.js
+      #  uses: actions/setup-node@v3
+      #  with:
+      #    node-version: 18 
 
-      - name: Install Dependencies
-        run: npm install
+      # brauchen wir das hier wirklich?
+      #- name: Install Dependencies
+      #  run: npm install
 
-      - name: Build Docusaurus
-        run: npm run build
-    
 
         
+    
+
+## als nächstes:
+## clonen des GH Pages repository
+## kopieren der markdown files in das GH Pages repository
+## Pushen nach GH pages 
+## https://github.com/marketplace/actions/github-pages-action
+## https://docs.github.com/en/actions/security-guides/automatic-token-authentication
