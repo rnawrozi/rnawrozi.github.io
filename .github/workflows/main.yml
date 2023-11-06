@@ -19,7 +19,6 @@ jobs:
       - name: Generate markdown 
         run: pydoc-markdown -I docs/   
       - name: Create Docusaurus
-        #run: cp -r path/to/source/folder path/to/destination/folder
         run: npx create-docusaurus@latest my-website classic
       - name: change Directory
         run: cd my-website
@@ -28,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16  # Ändern Sie die Node.js-Version nach Bedarf
+          node-version: 16  
 
       - name: Install Dependencies
         run: npm install
