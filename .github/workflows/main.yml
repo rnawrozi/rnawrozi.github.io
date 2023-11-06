@@ -18,14 +18,13 @@ jobs:
         run: cd reposit01
       - name: Generate markdown 
         run: pydoc-markdown -I docs/   
-    #(4. Kopieren eines Ordners)
-    - name: Copy Folder
+      - name: Create Docusaurus
         #run: cp -r path/to/source/folder path/to/destination/folder
         run: npx create-docusaurus@latest my-website classic
+      - name: change Directory
         run: cd my-website
+      - name: copy Folder
         run: cp -r ./docs ./my-website
-    #(5 Docusaurus BUILDING)
-    steps:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
