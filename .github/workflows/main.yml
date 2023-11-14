@@ -17,7 +17,7 @@ jobs:
       - name: Go to directory
         run: cd rds-ng/docs
       - name: Generate markdown 
-        run: pydoc-markdown  
+        run: pydoc-markdown -I 
       - name: Build Docusaurus # create weg, stattdessen build docusaurus
         run: npm run build      
 
