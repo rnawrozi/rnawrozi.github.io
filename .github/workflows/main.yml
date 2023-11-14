@@ -16,18 +16,20 @@ jobs:
         run: pip install pydoc-markdown
       - name: Go to directory
         run: cd rds-ng/docs
-      - name: Generate markdown 
-        run: pydoc-markdown -I 
-      - name: Build Docusaurus # create weg, stattdessen build docusaurus
-        run: npm run build      
 
+        
         
       # brauchen wir das hier wirklich?
       
-      #- name: Setup Node.js
-      #  uses: actions/setup-node@v3
-      #  with:
-      #    node-version: 18 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 
+      - name: Generate markdown 
+        run: pydoc-markdown 
+      - name: Build Docusaurus # create weg, stattdessen build docusaurus
+        run: npm run build      
+
 
     
       #- name: Install Dependencies
