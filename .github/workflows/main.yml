@@ -20,13 +20,16 @@ jobs:
         run: pydoc-markdown  
       - name: Build Docusaurus # create weg, stattdessen build docusaurus
         run: npm run build      
+
+        
       # brauchen wir das hier wirklich?
+      
       #- name: Setup Node.js
       #  uses: actions/setup-node@v3
       #  with:
       #    node-version: 18 
 
-      # brauchen wir das hier wirklich?
+    
       #- name: Install Dependencies
       #  run: npm install
 
