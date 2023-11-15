@@ -14,11 +14,6 @@ jobs:
       
       - name: Install docstring-markdown
         run: pip install pydoc-markdown
- 
-
-        
-        
-      # brauchen wir das hier wirklich?
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -27,12 +22,13 @@ jobs:
       - name: Generate markdown 
         run: pydoc-markdown -I rds-ng/docs
 
-      - name: Go to directory
-        run: cd rds-ng/docs
+     
 
       - name: Install Dependencies
-        run: npm install
-
+        run: |
+         cd rds-ng/docs
+         npm install
+      
       - name: Build Docusaurus # create weg, stattdessen build docusaurus
         run: npm run build      
 
