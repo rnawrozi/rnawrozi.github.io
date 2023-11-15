@@ -31,10 +31,10 @@ jobs:
         run: cd rds-ng/docs
 
       - name: Install Dependencies
-        run: npm install
+        run: sudo npm install
 
       - name: Build Docusaurus # create weg, stattdessen build docusaurus
-        run: npm run build      
+        run: sudo npm run build      
 
 
     
