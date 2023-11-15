@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Clone repository
-        run: git clone https://github.com/Sciebo-RDS/rds-ng.git
+        run: git clone https://github.com/Soroush9978/rds-ng
       
       - name: Install docstring-markdown
         run: pip install pydoc-markdown
