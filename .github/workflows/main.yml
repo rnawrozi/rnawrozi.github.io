@@ -29,14 +29,16 @@ jobs:
 
       - name: Go to directory
         run: cd rds-ng/docs
+
+      - name: Install Dependencies
+        run: npm install
+
       - name: Build Docusaurus # create weg, stattdessen build docusaurus
         run: npm run build      
 
 
     
-      #- name: Install Dependencies
-      #  run: npm install
-
+     
 
         
     
