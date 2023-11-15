@@ -28,9 +28,10 @@ jobs:
         run: |
          cd rds-ng/docs
          npm install
+         npm run build    
       
-      - name: Build Docusaurus # create weg, stattdessen build docusaurus
-        run: npm run build      
+      #- name: Build Docusaurus # create weg, stattdessen build docusaurus
+       # run: npm run build      
 
 
     
