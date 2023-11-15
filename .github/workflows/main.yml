@@ -14,8 +14,8 @@ jobs:
       
       - name: Install docstring-markdown
         run: pip install pydoc-markdown
-      - name: Go to directory
-        run: cd rds-ng/docs
+      #- name: Go to directory
+      #  run: cd rds-ng/docs
 
         
         
@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 18 
       - name: Generate markdown 
-        run: pydoc-markdown 
+        run: pydoc-markdown -I rds-ng/docs
       - name: Build Docusaurus # create weg, stattdessen build docusaurus
         run: npm run build      
 
