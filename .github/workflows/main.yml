@@ -32,14 +32,6 @@ jobs:
       
       #- name: Build Docusaurus # create weg, stattdessen build docusaurus
        # run: npm run build      
-
-
-    
-     
-
-        
-    
-
 ## als nächstes:
 ## clonen des GH Pages repository
 ## kopieren der markdown files in das GH Pages repository
